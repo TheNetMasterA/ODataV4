@@ -2,6 +2,11 @@ specVersion: '2.4'
 metadata:
   name: 'odatav4'
 type: application
+resources: 
+    configuration:
+        paths:
+        # Se utiliza webapp: ./dist cuando se ha ejecutado "ui5 build" ya que se genera el preload
+            webapp: ./webapp
 server:
   customMiddleware:
   - name: fiori-tools-proxy
