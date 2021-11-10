@@ -22,15 +22,24 @@
 		"int-tests": "fiori run --open test/integration/opaTests.qunit.html"
 	},
 	"devDependencies": {
-        "@ui5/cli": "^2.11.1",
-        "@ui5/fs": "^2.0.6",
-        "@ui5/logger": "^2.0.1",
-        "@sap/ux-ui5-tooling": "1",
-        "rimraf": "3.0.2"
-},
+		"@sap/ux-ui5-tooling": "1",
+		"@ui5/cli": "^2.11.1",
+		"@ui5/fs": "^2.0.6",
+		"@ui5/logger": "^2.0.1",
+		"grunt-openui5": "^0.18.2",
+		"rimraf": "3.0.2"
+	},
 	"ui5": {
 		"dependencies": [
 			"@sap/ux-ui5-tooling"
 		]
+	},
+	"dependencies": {
+		"fs": "^0.0.1-security",
+		"gulp": "^3.9.1",
+		"gulp-pretty-data": "^0.1.2",
+		"gulp-tap": "^2.0.0",
+		"gulp-uglify": "^3.0.2",
+		"path": "^0.12.7"
 	}
 }
