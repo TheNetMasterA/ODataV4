@@ -1,8 +1,8 @@
 sap.ui.define([
 	"sap/ui/core/UIComponent",
-	"sap/ui/Device",
+	// "sap/ui/Device",
 	"odatav4/model/models"
-], function (UIComponent, Device, models) {
+], function (UIComponent, models) {
 	"use strict";
 
 	return UIComponent.extend("odatav4.Component", {
@@ -21,7 +21,7 @@ sap.ui.define([
 			UIComponent.prototype.init.apply(this, arguments);
 
 			// enable routing
-			this.getRouter().initialize();
+			// this.getRouter().initialize();
 
 			// set the device model
 			this.setModel(models.createDeviceModel(), "device");

@@ -14,7 +14,16 @@
     "title": "{{appTitle}}",
     "description": "{{appDescription}}",
     "resources": "resources.json",
-    "ach": "ach"
+    "ach": "ach",
+    "dataSources": {
+      "default": {
+        "uri": "https://services.odata.org/TripPinRESTierService/(S(id))/",
+        "type": "OData",
+        "settings": {
+          "odataVersion": "4.0"
+        }
+      }
+    }
   },
   "sap.ui": {
     "technology": "UI5",
@@ -61,6 +70,15 @@
           "bundleName": "odatav4.i18n.i18n",
           "supportedLocales": ["en", "es"],
 					"fallbackLocale": "es"
+        }
+      },
+      "": {
+				"dataSource": "default",
+				"settings": {
+					"autoExpandSelect": true,
+					"operationMode": "Server",
+					"groupId": "$direct",
+					"synchronizationMode": "None"
         }
       }
     },
