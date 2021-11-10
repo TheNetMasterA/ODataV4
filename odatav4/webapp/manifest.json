@@ -1,0 +1,102 @@
+{
+  "_version": "1.32.0",
+  "sap.app": {
+    "id": "odatav4",
+    "type": "application",
+    "i18n": {
+			"bundleUrl": "i18n/i18n.properties",
+			"supportedLocales": ["","en", "es"],
+			"fallbackLocale": "es"
+		},    
+    "applicationVersion": {
+      "version": "1.0.0"
+    },
+    "title": "{{appTitle}}",
+    "description": "{{appDescription}}",
+    "resources": "resources.json",
+    "ach": "ach"
+  },
+  "sap.ui": {
+    "technology": "UI5",
+    "icons": {
+      "icon": "sap-icon://task",
+      "favIcon": "",
+      "phone": "",
+      "phone@2": "",
+      "tablet": "",
+      "tablet@2": ""
+    },
+    "deviceTypes": {
+      "desktop": true,
+      "tablet": true,
+      "phone": true
+    }
+  },
+
+  "sap.ui5": {
+    "flexEnabled": false,
+    "rootView": {
+      "viewName": "odatav4.view.Vista1",
+      "type": "XML",
+      "async": true,
+      "id": "Vista1"
+    },
+    "dependencies": {
+			"minUI5Version": "1.96.0",
+      "libs": {
+        "sap.ui.core": {},
+        "sap.m": {},
+        "sap.ui.layout": {},
+        "sap.f": {}
+      }
+    },
+    "contentDensities": {
+      "compact": true,
+      "cozy": true
+    },
+    "models": {
+      "i18n": {
+        "type": "sap.ui.model.resource.ResourceModel",
+        "settings": {
+          "bundleName": "odatav4.i18n.i18n",
+          "supportedLocales": ["en", "es"],
+					"fallbackLocale": "es"
+        }
+      }
+    },
+    "resources": {
+      "css": [
+        {
+          "uri": "css/style.css"
+        }
+      ]
+    },
+    "routing": {
+      "config": {
+        "routerClass": "sap.m.routing.Router",
+        "viewType": "XML",
+        "async": true,
+        "viewPath": "odatav4.view",
+        "controlAggregation": "pages",
+        "controlId": "app",
+        "clearControlAggregation": false
+      },
+      "routes": [
+        {
+          "name": "RouteVista1",
+          "pattern": "RouteVista1",
+          "target": ["TargetVista1"]
+        }
+      ],
+      "targets": {
+        "TargetVista1": {
+          "viewType": "XML",
+          "transition": "slide",
+          "clearControlAggregation": false,
+          "viewId": "Vista1",
+          "viewName": "Vista1"
+        }
+      }
+    }
+  }
+}
